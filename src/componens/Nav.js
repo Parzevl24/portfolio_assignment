@@ -1,4 +1,4 @@
-import "./Nav.css"
+import "./style.css"
 import "./mediaqueries.css"
 function Nav(){
     const toggleMenu= () => {

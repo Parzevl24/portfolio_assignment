@@ -2,7 +2,8 @@ import "./style.css";
 import arrowImage from "./assets/arrow.png";
 import projectImage_1 from "./assets/proj-1.png";
 import projectImage_2 from "./assets/proj-2.png";
-import projectImage_3 from "./assets/project-1.png";
+import projectImage_3 from "./assets/art3.png";
+
 function ProjectSection() {
   return (
     <div>
@@ -75,6 +76,9 @@ function ProjectSection() {
               <div className="article-container">
                 <img
                   src={projectImage_3}
+                  style={{
+                    height: '300px'
+                  }}
                   alt="project"
                   className="project-img"
                 />
@@ -86,7 +90,7 @@ function ProjectSection() {
                 <button
                   className="btn btn-color-2 project-btn"
                   onClick={() =>
-                    (window.location.href = "https://www.github.com")
+                    (window.location.href = "https://github.com/Parzevl24/art_gallery")
                   }
                 >
                   github
@@ -94,7 +98,7 @@ function ProjectSection() {
                 <button
                   className="btn btn-color-2 project-btn"
                   onClick={() =>
-                    (window.location.href = "https://www.github.com")
+                    (window.location.href = "https://art-gallery-iota-vert.vercel.app/")
                   }
                 >
                   Live Demo

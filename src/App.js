@@ -6,6 +6,7 @@ import ExperienceSection from "./componens/ExperienceSection";
 import ProjectSection from "./componens/ProjectSection";
 import ContactSection from "./componens/ContactSection";
 import Footer from "./componens/Footer";
+import EducationSection from "./componens/EducationSection";
 function App() {
   return (
     <div className="App">
@@ -14,6 +15,7 @@ function App() {
       <AboutSection/>
       <ExperienceSection/>
       <ProjectSection />
+      <EducationSection/>
       <ContactSection/>
       <Footer/>
     </div>

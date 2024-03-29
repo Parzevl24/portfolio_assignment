@@ -1,8 +1,7 @@
-import "./style.css";
+import React from "react";
+import data from "./data.json";
 import arrowImage from "./assets/arrow.png";
-import projectImage_1 from "./assets/proj-1.png";
-import projectImage_2 from "./assets/proj-2.png";
-import projectImage_3 from "./assets/art3.png";
+import "./style.css";
 
 function ProjectSection() {
   return (
@@ -10,108 +9,46 @@ function ProjectSection() {
       <section id="projects">
         <p className="section__text__p1">Browse My Recent</p>
         <h1 className="title">Projects</h1>
-        <div className="experience-details-container">
-          <div className="about-containers">
-            <div className="details-container color-container">
-              <div className="article-container">
-                <img
-                  src={projectImage_1}
-                  alt="project"
-                  className="project-img"
-                />
+        <div></div>
+        <div className="projects-container">
+          <div className="project-items">
+            {data.user.projects.map((project, index) => (
+              <div key={index} className="project-item">
+                <div className="details-container color-container">
+                  <div className="article-container">
+                    <img
+                      src={project.image.url}
+                      alt="project"
+                      className="project-img"
+                    />
+                  </div>
+                  <h2 className="experience-sub-title project-title">
+                    {project.title}
+                  </h2>
+                  <div className="btn-container">
+                    <button
+                      className="btn btn-color-2 project-btn"
+                      onClick={() => (window.location.href = project.github)}
+                    >
+                      github
+                    </button>
+                    <button
+                      className="btn btn-color-2 project-btn"
+                      onClick={() => (window.location.href = project.liveurl)}
+                    >
+                      Live Demo
+                    </button>
+                  </div>
+                </div>
               </div>
-              <h2 className="experience-sub-title project-title">
-                Project one
-              </h2>
-              <div className="btn-container">
-                <button
-                  className="btn btn-color-2 project-btn"
-                  onClick={() =>
-                    (window.location.href = "https://github.com/Parzevl24/Colour-Picker-react-.git")
-                  }
-                >
-                  github
-                </button>
-                <button
-                  className="btn btn-color-2 project-btn"
-                  onClick={() =>
-                    (window.location.href = "https://colour-picker-react-wheat.vercel.app/")
-                  }
-                >
-                  Live Demo
-                </button>
-              </div>
-            </div>
-            <div className="details-container color-container">
-              <div className="article-container">
-                <img
-                  src={projectImage_2}
-                  alt="project"
-                  className="project-img"
-                />
-              </div>
-              <h2 className="experience-sub-title project-title">
-                Project Two
-              </h2>
-              <div className="btn-container">
-                <button
-                  className="btn btn-color-2 project-btn"
-                  onClick={() =>
-                    (window.location.href = "https://github.com/Parzevl24/Calculator-react-.git")
-                  }
-                >
-                  github
-                </button>
-                <button
-                  className="btn btn-color-2 project-btn"
-                  onClick={() =>
-                    (window.location.href = "https://word-counter-react-s3dz.vercel.app/")
-                  }
-                >
-                  Live Demo
-                </button>
-              </div>
-            </div>
-            <div className="details-container color-container">
-              <div className="article-container">
-                <img
-                  src={projectImage_3}
-                  style={{
-                    height: '300px'
-                  }}
-                  alt="project"
-                  className="project-img"
-                />
-              </div>
-              <h2 className="experience-sub-title project-title">
-                Project Three
-              </h2>
-              <div className="btn-container">
-                <button
-                  className="btn btn-color-2 project-btn"
-                  onClick={() =>
-                    (window.location.href = "https://github.com/Parzevl24/art_gallery")
-                  }
-                >
-                  github
-                </button>
-                <button
-                  className="btn btn-color-2 project-btn"
-                  onClick={() =>
-                    (window.location.href = "https://art-gallery-iota-vert.vercel.app/")
-                  }
-                >
-                  Live Demo
-                </button>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
         <img
           src={arrowImage}
           alt="Arrow icon "
           className="icon arrow"
-          onClick={() => (window.location.href = "./#experience")}
+          onClick={() => (window.location.href = "./#contact")}
         />
       </section>
     </div>

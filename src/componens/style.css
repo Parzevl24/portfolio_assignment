@@ -8,6 +8,7 @@
 
 body{
     font-family: "poppins", sans-serif;
+    overflow-x: hidden;
 }
 
 html{
@@ -312,8 +313,9 @@ section {
 
 .projects-container {
     overflow-x:scroll;
-    white-space: nowrap;
+    white-space: wrap;
     padding: 20px 0;
+    
   }
   
   .project-items {
@@ -436,3 +438,85 @@ footer{
 footer p{
     text-align: center;
 }
+
+/* service */
+
+.project-item {
+    transition: transform 0.3s;
+    margin: 10px;
+  }
+  
+  .project-item:hover {
+    transform: scale(1.1);
+  }
+  
+  .service-desc {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(9, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    color: azure;
+
+  }
+  
+  .project-item:hover .service-desc {
+    display: block;
+  }
+  
+  /* Testimonials */
+
+  .testimonials-slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .testimonial {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    width: 100;
+    height: 100;
+    display: none;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 2px solid #656262; /* Outline around the testimonial box */
+  }
+  
+  .testimonial.active {
+    display: block;
+    animation: fadeInOut 5s linear forwards; /* Fade-in and fade-out animation */
+  }
+  
+  @keyframes fadeInOut {
+    0%, 100% {
+      opacity: 0;
+    }
+    10%, 90% {
+      opacity: 1;
+    }
+  }
+  
+  .testimonial h3 {
+    font-weight: bold;
+    font-size: 50px;
+  }
+  
+  .testimonial-review {
+    margin-bottom: 10px;
+    font-size: 25px;
+  }
+  
+  .testimonial-position {
+    font-style: italic;
+    font-weight: 100;
+    font-size: 20px;
+  }
+  

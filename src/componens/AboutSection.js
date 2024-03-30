@@ -31,7 +31,7 @@ function AboutSection(){
                         </div>
                     </div>
                 </div>
-                <img src={arrowImage} alt="Arrow icon " className="icon arrow" onClick={() =>window.location.href='./#experience'}  />
+                <img src={arrowImage} alt="Arrow icon " className="icon arrow" onClick={() =>window.location.href='./#services'}  />
             </section>
         </div>
     )

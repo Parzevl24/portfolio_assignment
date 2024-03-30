@@ -4,10 +4,13 @@ function Footer() {
   return (
     <div>
       <footer>
-        <nav className="nav-links-container" style={{marginTop: "100px"}}>
+        <nav className="nav-links-container" style={{marginTop: "50px"}}>
           <ul class="nav-links">
             <li>
               <a href="#about"> About </a>
+            </li>
+            <li>
+              <a href="#services"> Services </a>
             </li>
             <li>
               <a href="#experience"> Experience</a>
@@ -17,6 +20,9 @@ function Footer() {
             </li>
             <li>
               <a href="#timeline"> Timeline</a>
+            </li>
+            <li>
+              <a href="#testimonials"> Testimonials</a>
             </li>
             <li>
               <a href="#contact"> Contact</a>

@@ -18,6 +18,9 @@ function Nav() {
               <a href="#about"> About </a>
             </li>
             <li>
+              <a href="#services"> Services </a>
+            </li>
+            <li>
               <a href="#experience"> Experience</a>
             </li>
             <li>
@@ -25,6 +28,9 @@ function Nav() {
             </li>
             <li>
               <a href="#timeline"> Timeline</a>
+            </li>
+            <li>
+              <a href="#testimonials"> Testimonials</a>
             </li>
             <li>
               <a href="#contact"> Contact</a>

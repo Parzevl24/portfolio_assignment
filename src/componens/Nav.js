@@ -34,7 +34,7 @@ function Nav() {
       </nav>
 
       <nav id="hamburger-nav">
-        <div class="logo"> Priyansu Kumar</div>
+        <div class="logo"> {data.user.about.name}</div>
         <div class="hamburger-menu">
           <div class="hamburger-icon" onClick={() => toggleMenu()}>
             <span></span>
